@@ -1,0 +1,167 @@
+.main-nav{
+  padding: 20px 30px;
+  transition: .2s ease .02s;
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  @include desktop-lg{
+    padding: 15px 30px;
+  }
+  @include mobile {
+    padding: 15px 20px;
+  }
+  @include desktop{
+    background: $primary-color;
+  }
+  .navbar-nav{
+    .nav-item{
+      .nav-link{
+        color: $white;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 1;
+        @include desktop{
+          padding: 15px 0;
+        }
+        &::before{
+          content: '';
+          position: absolute;
+          left: 15px;
+          bottom: 15px;
+          width: 30px;
+          height: 3px;
+          background: rgba($color: $white, $alpha: 0.3);
+          z-index: -1;
+          transition: transform .45s cubic-bezier(.165,.84,.44,1);
+          transform: scaleX(0);
+          transform-origin: right;
+          @include desktop{
+            content: none;
+          }
+        }
+        &:hover{
+          color: $white;
+          &::before{
+            transform: scaleX(1);
+            transform-origin: left;
+          }
+        }
+        &.active{
+          color: $white;
+          &::before{
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+    @include desktop{
+      text-align: center;
+    }
+  }
+  .navbar-brand{
+    margin-right: 0;
+    text-align: center;
+    img{
+      width: 160px;
+      @include mobile{
+        width: 100px;
+      }
+    }
+  }
+  .account-list{
+    margin-left: 85px;
+    display: flex;
+    align-items: center;
+    @include desktop{
+      margin-left: 0;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+    li{
+      a{
+        color: $white;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .navbar-toggler{
+    outline: 0;
+    padding: 0;
+  }
+  &.nav-bg{
+    background: $primary-color;
+    padding: 15px 20px;
+    border: none;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.09);
+    .nav-link{
+      &::before{
+        background: darken($color: $white, $amount: 10) !important;
+      }
+    }
+  }
+}
+.promotional-ad{
+  display: block;
+  text-align: center;
+  background-image: linear-gradient( 90deg, rgb(255,120,165) 0%, rgb(255,150,87) 100%);
+  padding: 10px 0;
+  position: relative;
+  @include desktop{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  p{
+    color: $white;
+    margin-bottom: 0;
+    @include mobile{
+      font-size: 12px;
+    }
+  }
+  &-close{
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    i{
+      color: $white;
+    }
+  }
+}
+
+// Headroomjs Styles
+.headroom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all .5s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -150px;
+  @include desktop{
+    top: 0;
+  }
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+.headroom--top{
+  top: 60px;
+  &.promo-close{
+    top: 0;
+  }
+  @include desktop{
+    top: 0;
+  }
+}

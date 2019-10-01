@@ -1,0 +1,32 @@
+body {
+  background: $body-color;
+}
+
+.section-title{
+  text-align: center;
+  margin-bottom: 100px;
+  @include desktop{
+    margin-bottom: 60px;
+  }
+  .icon{
+    width: 80px;
+    height: 80px;
+    background: $white;
+    border-radius: 50%;
+    position: relative;
+    svg{
+      height: 40px;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    margin: 0 auto 55px;
+    box-shadow: 0px 45px 53px 0px rgba(0, 0, 0, 0.18);
+  }
+  h2{
+    margin-bottom: 25px;
+    @include desktop{
+      font-size: 30px;
+    }
+  }
+}

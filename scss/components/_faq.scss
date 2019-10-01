@@ -1,0 +1,95 @@
+.faq{
+  background: $light-gray;
+  padding: 100px 0;
+  overflow: hidden;
+  @include tablet{
+    padding: 80px 0;
+  }
+  .container{
+    position: relative;
+  }
+  &-accordion{
+    margin-bottom: 30px;
+    &-item{
+      margin-bottom: 20px;
+      background: rgba($color: $white, $alpha: 0.6);
+      border-radius: 5px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      .header{
+        position: relative;
+        h5{
+          .btn-link{
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 30px 60px 30px 30px;
+            font-size: 16px;
+            text-decoration: none;
+            color: $secondary-color;
+            white-space: unset;
+            position: relative;
+            letter-spacing: 1px;
+            border: none;
+            box-shadow: none;
+            outline: 0;
+            cursor: pointer;
+            &:before, &:after{
+              content: '';
+              position: absolute;
+              width: 15px; height: 2px;
+              top: 50%; right: 25px;
+              background: #bdc2c8;
+              transform: translateY(-50%) rotate(0);
+              transition: transform .5s ease;
+            }
+            &.collapsed{
+              &:after{
+                transform: translateY(-50%) rotate(270deg);
+              }
+            }
+          }
+        }
+      }
+      .body{
+        color: $text-color;
+        line-height: 25px;
+        padding: 0 30px 30px;
+      }
+      &.active{
+        background: $white;
+        box-shadow: 0px 45px 57px 0px rgba(0, 0, 0, 0.06);
+      }
+    }
+  }
+  &-shape{
+    &-topLeft{
+      position: absolute;
+      top: 7%; left: -7%;
+      svg{
+        width: 163px;
+      }
+      @include tablet{
+        display: none;
+      }
+    }
+    &-bottomRight{
+      position: absolute;
+      right: -5%;
+      bottom: 0%;
+      svg{
+        width: 218px;
+      }
+      @include tablet{
+        display: none;
+      }
+    }
+  }
+  &-more-button{
+    a{
+      color: $primary-color;
+    }
+  }
+}

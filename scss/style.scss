@@ -1,0 +1,43 @@
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+PROJECT:	Apex Followers
+-------------------------------------------------------------------*/
+@import "variables";
+
+@import 'plugins/bootstrap.min';
+
+@import 'plugins/slick';
+
+@import 'plugins/slick-theme';
+
+@import 'plugins/aos';
+
+@import 'plugins/nouislider';
+
+@import "typography";
+
+@import "mixins";
+
+@import "buttons";
+
+@import "common";
+
+@import "components/navigation";
+
+@import "components/hero";
+
+@import "components/service";
+
+@import "components/pricing";
+
+@import "components/testimonial";
+
+@import "components/faq";
+
+@import "components/cta";
+
+@import "components/blog";
+
+@import "components/footer";
+
+

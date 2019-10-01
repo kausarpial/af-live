@@ -1,0 +1,170 @@
+.hero{
+  padding: 250px 0 270px;
+  background-image: url('../images/backgrounds/hero-bg.svg');
+  background-position: bottom center;
+  background-size: cover;
+  background-color: $light-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include desktop{
+    padding: 200px 0 250px;
+  }
+  @include mobile{
+    padding: 130px 0 150px;
+    background-image: url('../images/backgrounds/hero-bg.png');
+  }
+  &-content{
+    h1{
+      color: $white;
+      margin-bottom: 40px;
+      @include tablet{
+        font-size: 35px;
+        margin-bottom: 25px;
+      }
+    }
+    @include desktop{
+      text-align: center;
+    }
+  }
+  &-image{
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    @include desktop{
+      margin-bottom: 70px;
+    }
+    @include mobile{
+      margin-bottom: 30px;
+    }
+    &-center{
+      img{
+        height: 460px;
+        width: auto;
+        @include tablet{
+          height: 300px;
+        }
+        @include mobile{
+          height: 270px;
+        }
+      }
+    }
+    &-topRight{
+      position: absolute;
+      width: 150px;
+      right: 5%;
+      top: -5%;
+      animation-name: right-left;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      @include tablet{
+        width: 100px;
+        right: 16%;
+      }
+      @include mobile{
+        width: 80px;
+        right: 20%;
+      }
+    }
+    &-topLeft{
+      position: absolute;
+      width: 225px;
+      top: -10%;
+      animation-name: right-left-rev;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      @include tablet{
+        width: 170px;
+        left: 10%;
+      }
+      @include mobile{
+        width: 140px;
+      }
+    }
+    &-bottomLeft{
+      position: absolute;
+      width: 160px;
+      bottom: 0;
+      left: 10%;
+      animation-name: right-left;
+      animation-duration: 2.5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      @include tablet{
+        width: 100px;
+        left: 18%;
+      }
+      @include mobile{
+        width: 80px;
+      }
+    }
+    &-bottomRight{
+      position: absolute;
+      width: 170px;
+      bottom: -5%;
+      right: 15%;
+      img{
+        transform: scaleX(-1);
+      }
+      animation-name: up-down-rev;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      @include tablet{
+        width: 110px;
+        right: 20%;
+      }
+      @include mobile{
+        width: 85px;
+      }
+    }
+    &-shapes{
+      position: absolute;
+      width: 110%;
+      top: -17%;
+      left: -5%;
+      z-index: -1;
+      animation-name: fade;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      @include tablet{
+        width: 100%;
+        left: 0;
+      }
+      @include mobile{
+        width: 70%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 50%);
+      }
+    }
+  }
+}
+
+@keyframes up-down {
+  0% { transform: translateY(0) }
+  100% { transform: translateY(-20px) }
+}
+
+@keyframes up-down-rev {
+  0% { transform: translateY(0) }
+  100% { transform: translateY(20px) }
+}
+
+@keyframes right-left {
+  0% { transform: translateX(0) }
+  100% { transform: translateX(20px) }
+}
+
+@keyframes right-left-rev {
+  0% { transform: translateX(0) }
+  100% { transform: translateX(-20px) }
+}
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  100%   { opacity: 1; }
+}

@@ -1,0 +1,109 @@
+.btn{
+  border: none;
+  padding: 18px 50px;
+  border-radius: 6px;
+  letter-spacing: 2px;
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &:focus{
+    box-shadow: none;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    left: 0; top: 0;
+    z-index: -1;
+    transition: transform 0.3s $site-ease;
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+  &:hover{
+    box-shadow: 0px 30px 45px 0px rgba(0, 0, 0, 0.05);
+    transform: scale(1.03);
+    &::before{
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+  }
+  // &:hover{
+  //   transform: scale(1.01);
+  // }
+}
+
+.btn-sm{
+  padding: 12px 30px !important;
+}
+
+.btn-sm-rounded{
+  border-radius: 40px;
+}
+
+.btn-primary{
+  background: $primary-color;
+  color: $white;
+  &:hover{
+    // background: darken($color: $primary-color, $amount: 10);
+    color: $primary-color;
+  }
+}
+
+.btn-secondary{
+  background: $secondary-color;
+  color: $white;
+  &:hover{
+    background: $white;
+    color: $secondary-color;
+  }
+}
+
+.btn-light-primary{
+  background: $white;
+  color: $primary-color;
+  &::before{
+    background: $primary-color;
+  }
+  &:hover{
+    color: $white;
+    background: $primary-color;
+  }
+}
+
+.btn-light-secondary{
+  background: $white;
+  color: $secondary-color;
+  &::before{
+    background: $secondary-color;
+  }
+  &:hover{
+    color: $white;
+    background: $secondary-color;
+  }
+}
+
+.btn-violate{
+  background: #948dff;
+  &:hover{
+    background: $white;
+    color: #948dff !important;
+  }
+}
+
+.btn-promo{
+  padding: 8px 15px;
+  background: $white;
+  color: #ff8e6c;
+  margin-left: 10px;
+  font-size: 12px;
+  &::before{
+    content: none;
+  }
+  &:hover{
+    color: #ff8e6c;
+    transform: scale(1);
+  }
+}

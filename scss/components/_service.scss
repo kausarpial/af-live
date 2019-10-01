@@ -1,0 +1,129 @@
+.service{
+  padding: 150px 0 230px;
+  background-color: $light-gray;
+  position: relative;
+  @include desktop{
+    padding: 100px 0 140px;
+  }
+  @include tablet{
+    padding: 80px 0;
+  }
+  .row{
+    position: relative;
+  }
+  &-item{
+    background: $white;
+    padding: 45px 25px;
+    border-radius: 15px;
+    transition: all 0.3s $site-ease;
+    @include desktop{
+      margin-bottom: 30px;
+    }
+    &:hover{
+      transform: scale(1.05);
+      box-shadow: 0px 30px 45px 0px rgba(0, 0, 0, 0.05);
+    }
+    &-icon{
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      border-radius: 50%;
+      position: relative;
+      margin-bottom: 30px;
+      svg{
+        height: 25px;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &-title{
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    &-description{
+      margin-bottom: 0;
+      line-height: 30px;
+    }
+    &.violate{
+      .service-item-icon{
+        background: linear-gradient( -242deg, rgb(188,135,255) 0%, rgb(242,197,247) 100%);
+      }
+    }
+    &.green{
+      .service-item-icon{
+        background: linear-gradient( -242deg, rgb(96,246,199) 0%, rgb(117,232,147) 100%);
+      }
+    }
+    &.pink{
+      .service-item-icon{
+        background: linear-gradient( -242deg, rgb(252,130,171) 0%, rgb(249,175,212) 100%);
+      }
+    }
+    &.magenta{
+      .service-item-icon{
+        background: linear-gradient( -242deg, rgb(131,216,255) 0%, rgb(156,244,221) 100%);
+      }
+    }
+  }
+  &-shape{
+    &-rightTop{
+      position: absolute;
+      right: -5%;
+      top: -25%;
+      animation-name: scale-fade;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      svg{
+        width: 218px;
+      }
+      @include desktop-xl{
+        right: 0%;
+      }
+      @include desktop{
+        top: -10%;
+      }
+      @include tablet{
+        display: none;
+      }
+    }
+    &-leftBottom{
+      position: absolute;
+      left: -5%;
+      bottom: -20%;
+      animation-name: scale-fade;
+      animation-duration: 2.5s;
+      animation-iteration-count: infinite;
+      animation-delay: -0.5s;
+      svg{
+        width: 163px;
+      }
+      @include desktop-xl{
+        left: 0;
+      }
+      @include desktop{
+        bottom: -10%;
+      }
+      @include tablet{
+        display: none;
+      }
+    }
+    &-bottom{
+      position: absolute;
+      width: 100%;
+      bottom: -10px;
+      svg{
+        path{
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+
+@keyframes scale-fade {
+  0%   { opacity: 1; transform: scale(0) }
+  50%  { opacity: 1; transform: scale(1) }
+  100% { opacity: 0; transform: scale(1) }
+}
