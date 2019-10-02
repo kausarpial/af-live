@@ -16,6 +16,8 @@
   }
   &-content{
     h1{
+      position: relative;
+      z-index: 2;
       color: $white;
       margin-bottom: 40px;
       @include tablet{

@@ -6,6 +6,9 @@
   background-size: cover;
   background-position: top center;
   position: relative;
+  @include mobile{
+    background-image: url('../images/backgrounds/blog-bg.png');
+  }
   .section-title{
     h2{
       color: $white;
