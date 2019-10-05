@@ -1,6 +1,38 @@
 $(document).ready(function() {
   "use strict";
   $('.main-nav').headroom();
+
+  // Counter
+  function counter() {
+    // content of yourFunction
+    $(".follower-count").each(function() {
+      var $this = $(this),
+        countTo = $this.attr("data-count");
+      $({
+        countNum: $this.text()
+      }).animate(
+        {
+          countNum: countTo
+        },
+        {
+          duration: 2000,
+          easing: "swing",
+          step: function() {
+            $this.text(Math.floor(this.countNum+1));
+          },
+          complete: function() {
+            setTimeout(function(){
+              $this.text('0');
+            }, 2500);
+          }
+        }
+      );
+    });
+    setTimeout(function(){counter()}, 5000);
+  }
+
+  counter();
+
   // Scroll to top
   $("a[href='#top']").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -30,50 +62,54 @@ $(document).ready(function() {
   });
 
   // Follower UI slider
-  var followerSlider = document.getElementById('followerSlider');
-  noUiSlider.create(followerSlider, {
-    start: [3000],
-    step: 100,
-    connect: [true, false],
-    range: {
-      'min': [1000],
-      'max': [10000]
-    }
-  });
-
-  var followerSliderValueElement = document.getElementById('pricing-table-item-count-follower');
-  var followerSliderValueElement2 = document.getElementById('pricing-table-item-slider-inner-count');
-  var followerSliderValuePrice = document.getElementById('pricing-table-item-price-follower');
-  followerSlider.noUiSlider.on('update', function (values, handle) {
-    followerSliderValueElement.innerHTML = values[handle]*1;
-    followerSliderValueElement2.innerHTML = values[handle]*1;
-    followerSliderValuePrice.innerHTML = values[handle]*0.005;
-    $('.slider-count-follower').css("left", values[handle]*0.01+'%');
-  });
+  if($('#followerSlider').length !== 0){
+    var followerSlider = document.getElementById('followerSlider');
+    noUiSlider.create(followerSlider, {
+      start: [3000],
+      step: 100,
+      connect: [true, false],
+      range: {
+        'min': [1000],
+        'max': [10000]
+      }
+    });
   
-  // Automatic Follower Slider
-  var automaticFollowerSlider = document.getElementById('automaticFollowerSlider');
-  noUiSlider.create(automaticFollowerSlider, {
-    start: [3000],
-    step: 100,
-    connect: [true, false],
-    range: {
-      'min': [1000],
-      'max': [10000]
-    }
-  });
+    var followerSliderValueElement = document.getElementById('pricing-table-item-count-follower');
+    var followerSliderValueElement2 = document.getElementById('pricing-table-item-slider-inner-count');
+    var followerSliderValuePrice = document.getElementById('pricing-table-item-price-follower');
+    followerSlider.noUiSlider.on('update', function (values, handle) {
+      followerSliderValueElement.innerHTML = values[handle]*1;
+      followerSliderValueElement2.innerHTML = values[handle]*1;
+      followerSliderValuePrice.innerHTML = values[handle]*0.005;
+      $('.slider-count-follower').css("left", values[handle]*0.01+'%');
+    });
+  }
 
-  var automaticFollowerSliderValueElement = document.getElementById('pricing-table-item-count-afollower-day');
-  var automaticFollowerSliderValueElementMonth = document.getElementById('pricing-table-item-count-afollower-month');
-  var automaticFollowerSliderValueElement2 = document.getElementById('pricing-table-item-slider-inner-count2');
-  var automaticFollowerSliderValuePrice = document.getElementById('pricing-table-item-price-afollower');
-  automaticFollowerSlider.noUiSlider.on('update', function (values, handle) {
-    automaticFollowerSliderValueElement.innerHTML = values[handle]*1;
-    automaticFollowerSliderValueElement2.innerHTML = values[handle]*1;
-    automaticFollowerSliderValueElementMonth.innerHTML = values[handle]*30;
-    automaticFollowerSliderValuePrice.innerHTML = values[handle]*0.005;
-    $('.slider-count-afollower').css("left", values[handle]*0.01+'%');
-  });
+  // Automatic Follower Slider
+  if($('#automaticFollowerSlider').length !== 0){
+    var automaticFollowerSlider = document.getElementById('automaticFollowerSlider');
+    noUiSlider.create(automaticFollowerSlider, {
+      start: [3000],
+      step: 100,
+      connect: [true, false],
+      range: {
+        'min': [1000],
+        'max': [10000]
+      }
+    });
+  
+    var automaticFollowerSliderValueElement = document.getElementById('pricing-table-item-count-afollower-day');
+    var automaticFollowerSliderValueElementMonth = document.getElementById('pricing-table-item-count-afollower-month');
+    var automaticFollowerSliderValueElement2 = document.getElementById('pricing-table-item-slider-inner-count2');
+    var automaticFollowerSliderValuePrice = document.getElementById('pricing-table-item-price-afollower');
+    automaticFollowerSlider.noUiSlider.on('update', function (values, handle) {
+      automaticFollowerSliderValueElement.innerHTML = values[handle]*1;
+      automaticFollowerSliderValueElement2.innerHTML = values[handle]*1;
+      automaticFollowerSliderValueElementMonth.innerHTML = values[handle]*30;
+      automaticFollowerSliderValuePrice.innerHTML = values[handle]*0.005;
+      $('.slider-count-afollower').css("left", values[handle]*0.01+'%');
+    });
+  }  
 
   // Testimonial Slider
   $('.testimonial-slider').slick({
@@ -153,6 +189,8 @@ $(document).ready(function() {
     $('.main-nav').addClass('promo-close');
   });
 });
+
+
 
 $(window).on('scroll', function () {
   var windscroll = $(window).scrollTop();

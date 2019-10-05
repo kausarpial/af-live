@@ -1,0 +1,60 @@
+.offer{
+  padding: 70px 0 120px;
+  position: relative;
+  .section-title{
+    margin-bottom: 50px;
+  }
+  &-item{
+    padding: 15px 80px;
+    text-align: center;
+    @include desktop-lg{
+      padding: 15px 40px;
+    }
+    &-icon{
+      width: 90px;
+      height: 90px;
+      text-align: center;
+      border-radius: 50%;
+      position: relative;
+      margin:0 auto 30px;
+      svg{
+        height: 45px;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &.violate{
+      .offer-item-icon{
+        background: linear-gradient( -242deg, rgb(188,135,255) 0%, rgb(242,197,247) 100%);
+      }
+    }
+    &.green{
+      .offer-item-icon{
+        background: linear-gradient( -242deg, rgb(96,246,199) 0%, rgb(117,232,147) 100%);
+      }
+    }
+    &.pink{
+      .offer-item-icon{
+        background: linear-gradient( -242deg, rgb(252,130,171) 0%, rgb(249,175,212) 100%);
+      }
+    }
+    &.magenta{
+      .offer-item-icon{
+        background: linear-gradient( -242deg, rgb(131,216,255) 0%, rgb(156,244,221) 100%);
+      }
+    }
+  }
+  &-shape{
+    &-bottom{
+      position: absolute;
+      width: 100%;
+      bottom: -10px;
+      svg{
+        path{
+          fill: $light-gray;
+        }
+      }
+    }
+  }
+}

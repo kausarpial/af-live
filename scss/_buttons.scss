@@ -93,6 +93,14 @@
   }
 }
 
+.btn-gradient-primary{
+  background-image: linear-gradient( -67deg, rgb(130,121,255) 1%, rgb(93,188,255) 100%);
+  color: $white;
+  &:hover{
+    color: $primary-color;
+  }
+}
+
 .btn-promo{
   padding: 8px 15px;
   background: $white;

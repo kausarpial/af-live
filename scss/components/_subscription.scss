@@ -1,0 +1,60 @@
+.subscription{
+  padding: 120px 0 200px;
+  background-color: $light-gray;
+  position: relative;
+  @include tablet{
+    padding: 70px 0 100px;
+  }
+  &-content{
+    text-align: center;
+    h2{
+      margin-bottom: 20px;
+    }
+    p{
+      margin-bottom: 50px;
+    }
+  }
+  &-form{
+    justify-content: center;
+    .form-group{
+      margin-right: 20px;
+      @include tablet{
+        display: block;
+        width: 100%;
+        margin-right: 0;
+      }
+      .form-control{
+        width: 500px;
+        @include desktop{
+          width: 280px;
+        }
+        @include tablet{
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+        @include mobile{
+          margin-bottom: 0px;
+        }
+      }
+    }
+    .btn-gradient-primary{
+      min-width: 180px;
+      @include tablet{
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &-shape-bottom{
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    svg{
+      path{
+        fill: $white;
+      }
+    }
+  }
+}

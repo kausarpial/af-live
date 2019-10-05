@@ -1,0 +1,62 @@
+.reason{
+  padding: 50px 0 100px;
+  background-color: $light-gray;
+  &-content{
+    h2{
+      margin-bottom: 40px;
+      @include tablet{
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+    }
+    p{
+      margin-bottom: 0;
+      span{
+        color: $text-color-dark;
+      }
+      a{
+        color: $primary-color;
+      }
+    }
+    @include desktop{
+      text-align: center;
+    }
+  }
+  &-image{
+    position: relative;
+    @include desktop{
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    img{
+      width: 100%;
+      @include desktop{
+        height: 400px;
+        width: auto;
+      }
+    }
+    &-follower{
+      position: absolute;
+      width: 250px;
+      bottom: 10%;
+      right: -3%;
+      animation-name: up-down-large;
+      animation-duration: 2.5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      img{
+        width: 100%;
+        height: auto;
+      }
+      @include desktop{
+        width: 100px;
+        right: 29%;
+      }
+    }
+  }
+}
+
+@keyframes up-down-large {
+  0% { transform: translateY(0) }
+  100% { transform: translateY(-35px) }
+}
