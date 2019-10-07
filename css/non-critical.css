@@ -7803,6 +7803,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   }
 }
 
+.offer-item-title {
+  font-size: 20px;
+}
+
 .offer-item-icon {
   width: 90px;
   height: 90px;
@@ -8105,6 +8109,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   }
 }
 
+@media (max-width: 400px) {
+  .reason-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .reason-image-follower {
   position: absolute;
   width: 250px;
@@ -8239,6 +8250,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: 400;
   margin-bottom: 15px;
   line-height: 40px;
+  font-size: 40px;
+}
+
+.pricing-table-item-price.long-text {
+  font-size: 30px;
 }
 
 @media (max-width: 1200px) {
@@ -8533,7 +8549,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   position: relative;
 }
 
-.faq-accordion-item .header h5 .btn-link {
+.faq-accordion-item .header h3 .btn-link {
   display: block;
   width: 100%;
   text-align: left;
@@ -8550,7 +8566,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   cursor: pointer;
 }
 
-.faq-accordion-item .header h5 .btn-link:before, .faq-accordion-item .header h5 .btn-link:after {
+.faq-accordion-item .header h3 .btn-link:before, .faq-accordion-item .header h3 .btn-link:after {
   content: '';
   position: absolute;
   width: 15px;
@@ -8565,7 +8581,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
-.faq-accordion-item .header h5 .btn-link.collapsed:after {
+.faq-accordion-item .header h3 .btn-link.collapsed:after {
   -webkit-transform: translateY(-50%) rotate(270deg);
           transform: translateY(-50%) rotate(270deg);
 }

@@ -8203,7 +8203,7 @@ h4 {
 
 @media (max-width: 575px) {
   .main-nav .navbar-brand img {
-    width: 100px;
+    width: 130px;
   }
 }
 
@@ -8566,6 +8566,13 @@ h4 {
   }
 }
 
+@media (max-width: 400px) {
+  .hero-image-center img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .hero-image-topRight {
   position: absolute;
   width: 150px;
@@ -8723,16 +8730,16 @@ h4 {
 
 .hero-image-count span {
   position: absolute;
-  font-size: 55px;
-  right: 12%;
+  font-size: 47px;
+  right: 19%;
   font-weight: 600;
-  top: 15%;
+  top: 21%;
   color: #00113E;
 }
 
 @media (max-width: 1200px) {
   .hero-image-count span {
-    font-size: 45px;
+    font-size: 40px;
   }
 }
 
