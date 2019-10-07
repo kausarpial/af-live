@@ -8467,6 +8467,40 @@ h4 {
   }
 }
 
+.hero.free-follower .free-follower-shape-bottom {
+  position: absolute;
+  width: 100%;
+  bottom: -10px;
+  display: none;
+}
+
+.hero.free-follower .free-follower-shape-bottom svg path {
+  fill: #f0f3f6;
+}
+
+.hero.free-follower.free-follower-bottom {
+  padding: 280px 0 150px;
+  background-image: url("../images/backgrounds/testimonial-bg.svg");
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  background-color: #f0f3f6;
+}
+
+@media (max-width: 575px) {
+  .hero.free-follower.free-follower-bottom {
+    background-image: url("../images/backgrounds/testimonial-bg.png");
+  }
+}
+
+.hero.free-follower.free-follower-bottom .hero-content h1 {
+  font-size: 40px;
+}
+
+.hero.free-follower.free-follower-bottom .free-follower-shape-bottom {
+  display: block;
+}
+
 .hero-content h1 {
   position: relative;
   z-index: 2;
@@ -8858,6 +8892,73 @@ h4 {
     right: 50%;
     -webkit-transform: translate(-50%, 50%);
             transform: translate(-50%, 50%);
+  }
+}
+
+.blog-header {
+  padding: 200px 0 180px;
+  background-color: #f0f3f6;
+  background-image: url("../images/backgrounds/hero-bg.svg");
+  background-position: bottom center;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .blog-header {
+    padding: 150px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .blog-header {
+    padding: 130px 0 150px;
+    background-image: url("../images/backgrounds/hero-bg.png");
+  }
+}
+
+.blog-header-content {
+  text-align: center;
+  position: relative;
+}
+
+.blog-header-content h1, .blog-header-content p {
+  color: #fff;
+}
+
+.blog-header-content h1 {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .blog-header-content h1 {
+    font-size: 40px;
+  }
+}
+
+.blog-header-content img {
+  width: 100%;
+}
+
+.blog-header-content-shape {
+  position: absolute;
+  width: 120%;
+  top: -20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@media (max-width: 991px) {
+  .blog-header-content-shape {
+    width: 100%;
   }
 }
 

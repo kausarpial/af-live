@@ -41,6 +41,36 @@
         }
       }
     }
+    .free-follower-shape-bottom{
+      position: absolute;
+      width: 100%;
+      bottom: -10px;
+      display: none;
+      svg{
+        path{
+          fill: $light-gray;
+        }
+      }
+    }
+    &.free-follower-bottom{
+      padding: 280px 0 150px;
+      background-image: url('../images/backgrounds/testimonial-bg.svg');
+      background-size: cover;
+      background-position: top center;
+      position: relative;
+      background-color: $light-gray;
+      @include mobile{
+        background-image: url('../images/backgrounds/testimonial-bg.png');
+      }
+      .hero-content{
+        h1{
+          font-size: 40px;
+        }
+      }
+      .free-follower-shape-bottom{
+        display: block;
+      }
+    }
   }
   &-content{
     h1{
@@ -292,6 +322,53 @@
         left: 50%;
         right: 50%;
         transform: translate(-50%, 50%);
+      }
+    }
+  }
+}
+
+.blog{
+  &-header{
+    padding: 200px 0 180px;
+    background-color: $light-gray;
+    background-image: url('../images/backgrounds/hero-bg.svg');
+    background-position: bottom center;
+    background-size: cover;
+    @include tablet{
+      padding: 150px 0;
+    }
+    @include mobile{
+      padding: 130px 0 150px;
+      background-image: url('../images/backgrounds/hero-bg.png');
+    }
+    &-content{
+      text-align: center;
+      position: relative;
+      h1,p{
+        color: $white;
+      }
+      h1{
+        margin-bottom: 30px;
+        @include tablet{
+          font-size: 40px;
+        }
+      }
+      img{
+        width: 100%;
+      }
+      &-shape{
+        position: absolute;
+        width: 120%;
+        top: -20%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation-name: fade;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        @include desktop{
+          width: 100%;
+        }
       }
     }
   }
