@@ -8969,6 +8969,59 @@ h4 {
   }
 }
 
+.blog-header.blog-single-page {
+  padding: 180px 0 300px;
+}
+
+@media (max-width: 767px) {
+  .blog-header.blog-single-page {
+    padding: 130px 0 200px;
+  }
+}
+
+.blog-header.blog-single-page .blog-header-content img {
+  display: none;
+}
+
+.blog-header.blog-single-page .blog-header-content-shape {
+  display: none;
+}
+
+.contact-header {
+  background-image: url("../images/backgrounds/free-follower-hero-bg.svg");
+  background-size: cover;
+  background-position: bottom center;
+  background-color: #f0f3f6;
+  padding: 200px 0 500px;
+}
+
+@media (max-width: 991px) {
+  .contact-header {
+    padding: 130px 0 480px;
+  }
+}
+
+@media (max-width: 575px) {
+  .contact-header {
+    background-image: url("../images/backgrounds/free-follower-hero-bg.png");
+  }
+}
+
+.contact-header-content h1, .contact-header-content p {
+  color: #fff;
+}
+
+.contact-header-content h1 {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .contact-header-content h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+}
+
 @-webkit-keyframes up-down {
   0% {
     -webkit-transform: translateY(0);

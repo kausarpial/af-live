@@ -34,6 +34,10 @@
         height: 400px;
         width: auto;
       }
+      @include mobile-xs{
+        width: 100%;
+        height: auto;
+      }
     }
     &-follower{
       position: absolute;

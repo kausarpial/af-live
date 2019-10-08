@@ -245,5 +245,11 @@
       }
     }
   }
+  &-single{
+    background: $light-gray;
+    &-wrapper{
+      margin-top: -250px;
+    }
+  }
 }
 

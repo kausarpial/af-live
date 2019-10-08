@@ -112,6 +112,10 @@
         @include mobile{
           height: 270px;
         }
+        @include mobile-xs{
+          width: 100%;
+          height: auto;
+        }
       }
       z-index: 2;
     }
@@ -212,13 +216,13 @@
       }
       span{
         position: absolute;
-        font-size: 55px;
-        right: 12%;
+        font-size: 47px;
+        right: 19%;
         font-weight: 600;
-        top: 15%;
+        top: 21%;
         color: $text-color-dark;
         @include desktop-lg{
-          font-size: 45px;
+          font-size: 40px;
         }
       }
     }
@@ -369,6 +373,17 @@
         @include desktop{
           width: 100%;
         }
+      }
+    }
+    &.blog-single-page{
+      padding: 180px 0 300px;
+      .blog-header-content{
+        img{
+          display: none;
+        }
+      }
+      .blog-header-content-shape{
+        display: none;
       }
     }
   }

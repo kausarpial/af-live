@@ -64,6 +64,10 @@
       font-weight: 400;
       margin-bottom: 15px;
       line-height: 40px;
+      font-size: 40px;
+      &.long-text{
+        font-size: 30px;
+      }
     }
     h3.pricing-table-item-price{
       @include desktop-lg{
