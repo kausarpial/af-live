@@ -9,6 +9,7 @@
   src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 .fa {
@@ -3031,6 +3032,7 @@
   font-style: normal;
   src: url("../fonts/slick.eot");
   src: url("../fonts/slick.eot?#iefix") format("embedded-opentype"), url("../fonts/slick.woff") format("woff"), url("../fonts/slick.ttf") format("truetype"), url("../fonts/slick.svg#slick") format("svg");
+  font-display: swap;
 }
 
 /* Arrows */
@@ -7882,6 +7884,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding: 45px 25px;
   border-radius: 15px;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  text-align: center;
 }
 
 @media (max-width: 991px) {
@@ -7902,7 +7905,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   text-align: center;
   border-radius: 50%;
   position: relative;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
 }
 
 .service-item-icon svg {
@@ -8560,7 +8563,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding: 30px 60px 30px 30px;
   font-size: 16px;
   text-decoration: none;
-  color: #c293e3;
+  color: #8A4BDE;
   white-space: unset;
   position: relative;
   letter-spacing: 1px;

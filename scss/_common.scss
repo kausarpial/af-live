@@ -31,6 +31,12 @@
   background-color: $light-gray;
 }
 
+.form-group{
+  label{
+    color: $text-color-dark;
+  }
+}
+
 .form-control{
   padding: 17px 20px;
   color: $text-color;

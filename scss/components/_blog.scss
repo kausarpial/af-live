@@ -247,8 +247,101 @@
   }
   &-single{
     background: $light-gray;
+    padding-bottom: 100px;
     &-wrapper{
       margin-top: -250px;
+      @include tablet{
+        margin-top: -150px;
+      }
+    }
+    &-post{
+      background: $white;
+      border-radius: 15px;
+      overflow: hidden;
+      @include desktop{
+        margin-bottom: 35px;
+      }
+      &-feature-image{
+        img{
+          width: 100%;
+        }
+      }
+      &-body{
+        padding: 45px 25px;
+        @include mobile{
+          padding: 30px 25px;
+        }
+      }
+      &-meta{
+        margin-bottom: 5px;
+        span{
+          text-transform: uppercase;
+        }
+      }
+      &-title{
+        font-size: 30px;
+        margin-bottom: 20px;
+        @include tablet{
+          font-size: 25px;
+        }
+      }
+      &-description{
+        img{
+          width: 100%;
+        }
+        p,img{
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+  &-sidebar{
+    &-widget{
+      background: $white;
+      padding: 30px 23px;
+      border-radius: 10px;
+      &:not(:last-child){
+        margin-bottom: 35px;
+      }
+      &-title{
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f3f6;
+        margin-bottom: 30px;
+        @include mobile{
+          font-size: 25px;
+        }
+      }
+      &-post{
+        &-meta{
+          font-size: 15px;
+          text-transform: uppercase;
+          color: #848484;
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+        &-title{
+          margin-bottom: 10px;
+          a{
+            color: $text-color-dark;
+            transition: all 0.3s ease;
+            font-weight: 400;
+            &:hover{
+              color: $primary-color;
+              text-decoration: none;
+            }
+          }
+        }
+        &-more{
+          color: $primary-color;
+          text-decoration: underline;
+        }
+        &:not(:last-child){
+          margin-bottom: 50px;
+          @include mobile{
+            margin-bottom: 40px;
+          }
+        }
+      }
     }
   }
 }

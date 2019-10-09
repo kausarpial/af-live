@@ -16,6 +16,7 @@
     padding: 45px 25px;
     border-radius: 15px;
     transition: all 0.3s $site-ease;
+    text-align: center;
     @include desktop{
       margin-bottom: 30px;
     }
@@ -29,7 +30,7 @@
       text-align: center;
       border-radius: 50%;
       position: relative;
-      margin-bottom: 30px;
+      margin:0 auto 30px;
       svg{
         height: 25px;
         position: absolute;

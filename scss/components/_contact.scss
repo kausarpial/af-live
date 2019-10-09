@@ -1,0 +1,34 @@
+.contact{
+  background: $light-gray;
+  padding-bottom: 200px;
+  @include mobile{
+    padding-bottom: 120px;
+  }
+  position: relative;
+  &-form{
+    &-wrapper{
+      background: $white;
+      padding: 40px 50px;
+      border-radius: 15px;
+      margin-top: -450px;
+      @include tablet{
+        padding: 30px;
+      }
+    }
+    .form-group{
+      margin-bottom: 30px;
+      @include desktop{
+        margin-bottom: 25px;
+      }
+    }
+    .btn{
+      @include mobile{
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &-shape-bottom{
+    @extend .subscription-shape-bottom;
+  }
+}
