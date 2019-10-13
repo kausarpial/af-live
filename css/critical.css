@@ -8017,6 +8017,16 @@ h4 {
   color: #60b7ff;
 }
 
+.btn-magenta {
+  background: #4cc5ca;
+  color: #fff;
+}
+
+.btn-magenta:hover {
+  background: #fff;
+  color: #4cc5ca;
+}
+
 .btn-secondary {
   background: #c293e3;
   color: #fff;
@@ -8100,7 +8110,7 @@ h4 {
   width: 100%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .main-nav {
     padding: 15px 30px;
   }
@@ -8448,7 +8458,7 @@ h4 {
   height: 375px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .hero.free-follower .hero-image-center img {
     width: 100%;
     height: auto;
@@ -8468,7 +8478,7 @@ h4 {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .hero.free-follower .hero-content h1 {
     font-size: 40px;
   }
@@ -8716,7 +8726,7 @@ h4 {
   z-index: 1;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .hero-image-count {
     width: 140px;
     top: 4%;
@@ -8752,7 +8762,7 @@ h4 {
   color: #00113E;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .hero-image-count span {
     font-size: 40px;
   }
@@ -8774,7 +8784,7 @@ h4 {
   left: 10%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .hero-image-followerExplore {
     width: 150px;
     left: 12%;
@@ -9090,6 +9100,36 @@ h4 {
   .contact-header-content h1 {
     font-size: 40px;
     margin-bottom: 20px;
+  }
+}
+
+.checkout-header {
+  background-image: url("../images/backgrounds/free-follower-hero-bg.svg");
+  background-size: cover;
+  background-position: bottom center;
+  background-color: #f0f3f6;
+  padding: 200px 0 500px;
+}
+
+@media (max-width: 991px) {
+  .checkout-header {
+    padding: 130px 0 480px;
+  }
+}
+
+@media (max-width: 575px) {
+  .checkout-header {
+    background-image: url("../images/backgrounds/free-follower-hero-bg.png");
+  }
+}
+
+.checkout-header-content h1 {
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .checkout-header-content h1 {
+    font-size: 40px;
   }
 }
 

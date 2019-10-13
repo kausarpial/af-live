@@ -188,6 +188,11 @@ $(document).ready(function() {
     $('.promotional-ad').css('display', 'none');
     $('.main-nav').addClass('promo-close');
   });
+
+  // Checkout Upsell Close
+  $('.checkout-upsell-block-close').on('click', function(){
+    $('.checkout-upsell-block').css('display', 'none');
+  })
 });
 
 

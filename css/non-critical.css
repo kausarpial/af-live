@@ -7803,7 +7803,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .offer-item {
     padding: 15px 40px;
   }
@@ -8264,7 +8264,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-size: 30px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .pricing-table-item h3.pricing-table-item-price {
     font-size: 20px;
   }
@@ -8520,6 +8520,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .testimonial-shape-bottom svg path {
   fill: #f0f3f6;
+}
+
+.testimonial-shape-bottom.shape-white svg path {
+  fill: #fff;
 }
 
 .faq {
@@ -8938,7 +8942,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   order: 1;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .blog-horizontal-post-body {
     width: 40%;
   }
@@ -8961,7 +8965,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   transition: all 0.3s ease;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .blog-horizontal-post-title {
     font-size: 20px;
   }
@@ -8996,7 +9000,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   transition: all 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .blog-horizontal-post-thumbnail {
     width: 60%;
   }
@@ -9251,6 +9255,283 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: block;
     width: 100%;
   }
+}
+
+.checkout {
+  padding-bottom: 100px;
+  background-color: #f0f3f6;
+}
+
+@media (max-width: 575px) {
+  .checkout {
+    padding-bottom: 50px;
+  }
+}
+
+.checkout-wrapper {
+  margin-top: -470px;
+}
+
+.checkout-automatic-block {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .checkout-automatic-block {
+    margin-bottom: 30px;
+  }
+}
+
+.checkout-automatic-block-header img {
+  width: 100%;
+}
+
+.checkout-automatic-block-body {
+  padding: 10px 25px 45px;
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+  .checkout-automatic-block-body {
+    padding: 35px 20px 55px;
+  }
+}
+
+@media (max-width: 991px) {
+  .checkout-automatic-block-body {
+    padding: 0 25px 30px;
+  }
+}
+
+.checkout-automatic-block-user-info .user-thumb {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+}
+
+@media (max-width: 575px) {
+  .checkout-automatic-block-user-info .user-thumb {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.checkout-automatic-block-user-info .user-thumb img {
+  width: 100%;
+}
+
+.checkout-automatic-block-user-info .username, .checkout-automatic-block-user-info .useremail {
+  color: #00113E;
+}
+
+.checkout-automatic-block-user-info .username {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.checkout-automatic-block-user-info .useremail {
+  margin-bottom: 30px;
+}
+
+.checkout-automatic-block-user-info a {
+  display: inline-block;
+  color: #4cc5ca;
+  text-decoration: underline;
+  margin-bottom: 40px;
+}
+
+.checkout-guarantee-top {
+  padding: 25px 40px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-bottom: 23px;
+}
+
+@media (max-width: 991px) {
+  .checkout-guarantee-top {
+    margin-bottom: 30px;
+    background-color: #787ff5;
+  }
+}
+
+.checkout-guarantee-top h2, .checkout-guarantee-top h3 {
+  color: #fff;
+}
+
+.checkout-guarantee-top h2 {
+  font-size: 35px;
+}
+
+.checkout-guarantee-top h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.checkout-guarantee-top p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.checkout-guarantee-bottom {
+  background: #fff;
+  border-radius: 20px;
+  text-align: center;
+  padding: 50px 40px;
+}
+
+.checkout-guarantee-bottom img {
+  margin-bottom: 15px;
+}
+
+.checkout-guarantee-bottom h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.checkout-guarantee-bottom.large-height {
+  padding: 63px 40px;
+}
+
+@media (max-width: 1199px) {
+  .checkout-guarantee-bottom.large-height {
+    padding: 73px 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .checkout-guarantee-bottom.large-height {
+    padding: 40px;
+  }
+}
+
+.checkout-upsell-block {
+  background-image: linear-gradient(49deg, #6d2ce8 0%, #eb90ad 100%);
+  margin-bottom: 23px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 30px 40px;
+  position: relative;
+}
+
+@media (max-width: 575px) {
+  .checkout-upsell-block {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .checkout-upsell-block {
+    margin-bottom: 30px;
+  }
+}
+
+.checkout-upsell-block h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 35px;
+  margin-bottom: 19px;
+}
+
+.checkout-upsell-block h2 span {
+  font-weight: 600;
+}
+
+.checkout-upsell-block button {
+  text-transform: uppercase;
+}
+
+@media (max-width: 400px) {
+  .checkout-upsell-block button {
+    padding: 15px 20px;
+    font-size: 13px;
+  }
+}
+
+.checkout-upsell-block-close {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: block;
+  right: 30px;
+  top: 30px;
+  position: absolute;
+}
+
+.checkout-upsell-block-close::before, .checkout-upsell-block-close::after {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.checkout-upsell-block-close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.checkout-upsell-block-close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.checkout-form-wrapper {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 25px;
+}
+
+@media (max-width: 991px) {
+  .checkout-form-wrapper {
+    margin-bottom: 30px;
+  }
+}
+
+.checkout-form .form-group {
+  margin-bottom: 10px;
+}
+
+.checkout-form .form-group label {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 400px) {
+  .checkout-form .form-group label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .checkout-form .form-control {
+    font-size: 13px;
+  }
+}
+
+.checkout-form .newsletter {
+  margin-bottom: 10px;
+}
+
+.checkout-form .newsletter p {
+  color: #434343;
+  margin-bottom: 8px;
+  line-height: 22px;
+}
+
+.checkout-form .newsletter p a {
+  color: #60b7ff;
+  text-decoration: underline;
+}
+
+.checkout-form .newsletter label {
+  color: #b1b1b1;
+  font-size: 14px;
 }
 
 .footer {

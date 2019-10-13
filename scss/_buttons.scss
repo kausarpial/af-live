@@ -30,9 +30,6 @@
       transform: scaleX(1);
     }
   }
-  // &:hover{
-  //   transform: scale(1.01);
-  // }
 }
 
 .btn-sm{
@@ -47,8 +44,16 @@
   background: $primary-color;
   color: $white;
   &:hover{
-    // background: darken($color: $primary-color, $amount: 10);
     color: $primary-color;
+  }
+}
+
+.btn-magenta{
+  background: #4cc5ca;
+  color: $white;
+  &:hover{
+    background: $white;
+    color: #4cc5ca;
   }
 }
 

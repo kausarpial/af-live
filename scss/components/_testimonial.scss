@@ -113,5 +113,12 @@
         fill: $light-gray;
       }
     }
+    &.shape-white{
+      svg{
+        path{
+          fill: $white;
+        }
+      }
+    }
   }
 }
