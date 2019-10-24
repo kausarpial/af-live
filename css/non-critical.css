@@ -9534,6 +9534,74 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-size: 14px;
 }
 
+.checkout-form-free {
+  width: 60%;
+  padding: 120px 0;
+  margin: 0 auto;
+}
+
+.checkout-form-free-wrapper {
+  background: #fff;
+  border-radius: 15px;
+  margin-top: -470px;
+}
+
+@media (max-width: 1199px) {
+  .checkout-form-free {
+    width: 75%;
+  }
+}
+
+@media (max-width: 991px) {
+  .checkout-form-free {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .checkout-form-free {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .checkout-form-free {
+    width: 90%;
+    padding: 65px 0;
+  }
+}
+
+.checkout-form-free .form-group {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 400px) {
+  .checkout-form-free .form-control {
+    font-size: 14px;
+  }
+}
+
+.checkout-form-free .newsletter {
+  margin-bottom: 10px;
+}
+
+.checkout-form-free .newsletter p {
+  color: #434343;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+.checkout-form-free .newsletter p a {
+  color: #60b7ff;
+  text-decoration: underline;
+}
+
+.checkout-form-free .newsletter label {
+  color: #b1b1b1;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
 .footer {
   padding: 80px 0 50px;
 }

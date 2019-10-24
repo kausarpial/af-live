@@ -1,6 +1,9 @@
 .checkout{
   padding-bottom: 100px;
   background-color: $light-gray;
+  @include mobile{
+    padding-bottom: 50px;
+  }
   &-wrapper{
     margin-top: -470px;
   }
@@ -34,6 +37,10 @@
           border-radius: 50%;
           overflow: hidden;
           margin: 0 auto 20px;
+          @include mobile{
+            width: 80px;
+            height: 80px;
+          }
           img{
             width: 100%;
           }
@@ -66,6 +73,7 @@
       margin-bottom: 23px;
       @include desktop{
         margin-bottom: 30px;
+        background-color: #787ff5;
       }
       h2,h3{
         color: $white;
@@ -92,6 +100,113 @@
       h2{
         font-size: 25px;
         margin-bottom: 10px;
+      }
+      &.large-height{
+        padding: 63px 40px;
+        @include desktop-lg{
+          padding: 73px 40px;
+        }
+        @include desktop{
+          padding: 40px;
+        }
+      }
+    }
+  }
+  &-upsell{
+    &-block{
+      background-image: linear-gradient( 49deg, rgb(109,44,232) 0%, rgb(235,144,173) 100%);
+      margin-bottom: 23px;
+      border-radius: 20px;
+      text-align: center;
+      padding: 30px 40px;
+      position: relative;
+      @include mobile{
+        padding: 30px 20px;
+      }
+      @include desktop{
+        margin-bottom: 30px;
+      }
+      h2{
+        font-size: 20px;
+        font-weight: 400;
+        color: $white;
+        line-height: 35px;
+        margin-bottom: 19px;
+        span{
+          font-weight: 600;
+        }
+      }
+      button{
+        text-transform: uppercase;
+        @include mobile-xs{
+          padding: 15px 20px;
+          font-size: 13px;
+        }
+      }
+      &-close{
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        display: block;
+        right: 30px;
+        top: 30px;
+        position: absolute;
+        &::before, &::after{
+          content: '';
+          width: 20px;
+          height: 1px;
+          background: $white;
+          position: absolute;
+          transform-origin: center;
+        }
+        &::before{
+          transform: rotate(45deg);
+        }
+        &::after{
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  &-form{
+    &-wrapper{
+      background: $white;
+      border-radius: 20px;
+      padding: 30px 25px;
+      @include desktop{
+        margin-bottom: 30px;
+      }
+    }
+
+    .form-group{
+      margin-bottom: 10px;
+      label{
+        margin-bottom: 5px;
+        @include mobile-xs{
+          font-size: 12px;
+        }
+      }
+    }
+    .form-control{
+      @include mobile-xs{
+        font-size: 13px;
+      }
+    }
+    .newsletter{
+      margin-bottom: 10px;
+      p{
+        a{
+          color: $primary-color;
+          text-decoration: underline;
+        }
+        color: #434343;
+        // font-size: 14px;
+        margin-bottom: 8px;
+        line-height: 22px;
+      }
+      label{
+        color: #b1b1b1;
+        font-size: 14px;
       }
     }
   }
